@@ -1,0 +1,9 @@
+<h1>{{$parent.settings.pageTitle}}</h1>
+
+<p ng-show="$parent.settings.success" class="alert alert-success">{{$parent.settings.success}}</p>
+<p ng-show="$parent.settings.error" class="alert alert-error">{{$parent.settings.error}}</p>
+<div class="required-field-block">
+    <input type="text" placeholder="Nodo principal" ng-model="nodo.nodo" class="form-control">
+    <input type="text" placeholder="Nodo padre" ng-model="nodo.padre" class="form-control">
+</div>
+<button class="btn btn-primary" ng-click="submit($parent.nodo)">{{$parent.settings.action}}</button>

@@ -1,0 +1,21 @@
+<h1>Saldo para {{recarga.numero}}</h1>
+
+<div class="alert alert-warning" ng-show="recarga == null">
+    <p>No hay saldo</p>
+</div>
+
+<table class="table table-bordered" ng-show="recarga != null">
+    <tr>
+        <th>Recargas</th>
+        <th>Consumos</th>
+        <th>Saldo en seg</th>
+        <th>Saldo en pesos</th>
+    </tr>
+    <tr>
+        <td>{{recarga.TotalRecargas}}</td>
+        <td>{{recarga.consumoTotal}}</td>
+        <td>{{recarga.SaldoTotalSeg}} segundos</td>
+        <td>${{recarga.SaldoTotalVal}} COP</td>
+        
+    </tr>
+</table>
